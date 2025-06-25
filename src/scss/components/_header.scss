@@ -1,0 +1,110 @@
+@use "./burger";
+
+.header {
+    position: static;
+    top: -100px;
+    font-family: Comfortaa;
+    text-transform: uppercase;
+    padding: 5px 0;
+    font-size: 16px;
+    background-color: var(--bg);
+    transition:
+        top 0.5s ease-in-out,
+        background-color 0.5s ease-in-out;
+
+    &.fixed {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 100;
+        width: 100%;
+        background-color: rgba(#7b6152, 0.9);
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__logo {
+        flex-shrink: 0;
+
+        @media (max-width: 650px) {
+            width: 50px;
+        }
+    }
+
+    &__phone {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        white-space: nowrap;
+
+        span {
+            color: #bea495;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--yellow);
+            }
+        }
+    }
+}
+
+.menu {
+    &__close {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        display: none;
+        width: 40px;
+        height: 40px;
+    }
+
+    &__link {
+        padding: 10px 0;
+        display: block;
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--yellow);
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 20px;
+
+        @media (max-width: 650px) {
+            flex-direction: column;
+            row-gap: 20px;
+        }
+    }
+
+    @media (max-width: 650px) {
+        z-index: 1008;
+        position: fixed;
+        left: -100%;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+       
+        transition: left 0.5s ease-in-out;
+        padding-top: 25px;
+        background-color: var(--beigedark);
+        color: #fff8f3;
+
+        &.open {
+            left: 0;
+        }
+
+        &__close {
+            display: block;
+        }
+    }
+}

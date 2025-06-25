@@ -1,0 +1,191 @@
+:root {
+    --accent: #8081bd;
+    --blue: #2b7af1;
+    --black: #000;
+    --yellow: #ffbd59;
+    --green: #5cb85c;
+    --red: #ea5d4a;
+    --grey: #fafafa;
+    --greydark: #333333;
+    --pink: #fff8f3;
+    --beige: #a5978e;
+    --beigedark: #7b6152;
+
+    --shedow: 0 10px 20px rgba(#334155, 0.1);
+    --shedow-btn: 0 10px 20px rgba(#f6b31f, 0.2);
+
+    --gradient: linear-gradient(to right, #ff7a00, #ffb039);
+
+    --bg: #fff8f3;
+
+    --container: 1160px;
+    --container-gap1: 15px;
+}
+
+body {
+    font-family: YesevaOne, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--black);
+    background-color: var(--bg);
+    line-height: 1.2;
+    box-sizing: border-box;
+}
+
+html,
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul,
+li,
+ol {
+    list-style: none;
+}
+
+button {
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-weight: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    color: inherit;
+}
+
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    font-style: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: calc(var(--container) + 40px);
+    padding: 0 var(--container-gap1);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 1 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+.centered {
+    text-align: center;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+h1,
+.h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+
+    @media (max-width: 1000px) {
+        font-size: 26px;
+    }
+
+    @media (max-width: 650px) {
+        font-size: 24px;
+    }
+}
+
+h2,
+.h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+
+    @media (max-width: 1000px) {
+        font-size: 22px;
+    }
+
+
+}
+
+h3,
+.h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+
+    @media (max-width: 1000px) {
+        font-size: 20px;
+    }
+
+
+}
+
+.text {
+    @media (max-width: 1024px) {
+        font-size: 16px;
+    }
+
+
+}

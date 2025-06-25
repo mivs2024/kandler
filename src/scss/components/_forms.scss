@@ -1,0 +1,55 @@
+.form {
+    &__field {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+    }
+
+    &__error {
+        padding-top: 7px;
+        display: none;
+        color: red;
+        font-size: 10px;
+    }
+
+    .form-error &__error {
+        display: block;
+    }
+
+    &__input {
+        width: 100%;
+        border: none;
+        // border-radius: 50px;
+        background-color: transparent;
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--black);
+
+        padding: 12px 20px;
+        border-bottom: 1px solid #000;
+
+        &::placeholder {
+            color: #B3B3B3;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        &--big {
+            border-radius: 20px;
+            resize: none;
+            height: 100%;
+        }
+
+        &--yellow{
+            background-color: var(--yellow);
+        }
+    }
+
+    &__caption {
+        font-size: 14px;
+        color: var(--gray800);
+        margin-bottom: 8px;
+        display: inline-block;
+    }
+}
